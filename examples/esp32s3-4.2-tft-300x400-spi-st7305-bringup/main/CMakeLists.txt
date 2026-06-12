@@ -1,4 +1,4 @@
-idf_component_register(SRCS "main.c"
+idf_component_register(SRCS "board_lcd_demo.c" "board_ui_draw.c" "main.c"
                             "board_lcd.c"
                             "board_touch.c"
                             "board_touch_demo.c"

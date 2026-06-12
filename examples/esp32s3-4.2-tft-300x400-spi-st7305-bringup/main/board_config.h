@@ -40,10 +40,8 @@
 #define BOARD_ST7305_ROW_END      (0xC7)
 #define BOARD_ST7305_B0_PARAM     (0x64)
 
-/* 219 默认 0x48；勿用 0x4C(GS) 否则常出现“只有半屏刷新” */
 #define BOARD_ST7305_MADCTL       (0x48)
 
-/* 4.2" 参考驱动无需额外列偏移 */
 #define BOARD_ST7305_COL_OFFSET   (0)
 
 #define BOARD_LCD_PATTERN_CYCLE   (0)

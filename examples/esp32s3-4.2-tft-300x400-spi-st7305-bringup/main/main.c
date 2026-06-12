@@ -1,5 +1,6 @@
 #include "board_config.h"
 #include "board_lcd.h"
+#include "board_lcd_demo.h"
 #include "board_touch.h"
 #include "esp_check.h"
 #include "esp_log.h"
@@ -23,6 +24,6 @@ void app_main(void)
     ESP_ERROR_CHECK(board_touch_init());
     board_touch_demo_start();
 #else
-    ESP_LOGI(TAG, "LCD only (BOARD_ENABLE_TOUCH=0 in board_config.h)");
+    board_lcd_demo_start();
 #endif
 }

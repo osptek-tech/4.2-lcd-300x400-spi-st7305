@@ -155,8 +155,10 @@ esp_err_t board_lcd_init(void)
              BOARD_LCD_PATTERN_HOLD_MS);
     xTaskCreate(pattern_cycle_task, "lcd_pat", 4096, NULL, 5, NULL);
 #else
+#if BOARD_ENABLE_TOUCH
     render_pattern(PAT_BORDER_FRAME);
     ESP_RETURN_ON_ERROR(st7305_lcd_flush(), TAG, "flush failed");
+#endif
     ESP_LOGI(TAG, "LCD ready %dx%d", BOARD_LCD_H_RES, BOARD_LCD_V_RES);
 #endif
 
